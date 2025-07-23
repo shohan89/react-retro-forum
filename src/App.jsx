@@ -1,4 +1,5 @@
 import './App.css'
+import Blogs from './Components/Blogs/Blogs'
 import Header from './Components/Header/Header'
 import Hero from './Components/Hero/Hero'
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <Header />
       <Hero />
+      <Blogs />
     </>
   )
 }
