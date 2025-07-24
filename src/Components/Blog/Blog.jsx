@@ -3,9 +3,9 @@ import { LuEye } from "react-icons/lu";
 import { TbMessage2 } from "react-icons/tb";
 import { WiTime9 } from "react-icons/wi";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleBookmars }) => {
     // This component is intended to display individual blog details.
-    const { id, category, image, isActive, title, author, description, comment_count, view_count, posted_time } = blog;
+    const { category, image, isActive, title, author, description, comment_count, view_count, posted_time } = blog;
     return (
         <div className=" md:flex mb-4 gap-4 p-4 bg-[#F3F3F5] hover:bg-purple-200 hover:border-2 hover:border-purple-600 border-2 border-[#F3F3F5] rounded-lg shadow-md md:w-full transition-all duration-300 ease-in-out">
             <div className="relative">
@@ -29,7 +29,7 @@ const Blog = ({ blog }) => {
                         <p className="flex items-center"><LuEye className="mr-4" />{view_count}</p>
                         <p className="flex items-center"><WiTime9 className="mr-4" />{posted_time}</p>
                     </div>
-                    <button className="p-4 bg-green-600 rounded-full cursor-pointer text-white"><FaEnvelopeOpen /></button>
+                    <button onClick={()=> handleBookmars(blog)} className="p-4 bg-green-600 rounded-full cursor-pointer text-white"><FaEnvelopeOpen /></button>
                 </div>
             </div>
         </div>
