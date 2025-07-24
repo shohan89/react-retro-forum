@@ -21,8 +21,8 @@ const Blogs = () => {
                 <p className="text-[18px] font-medium text-center text-gray-600 mt-2">Yes, you can run unit tests and view the results directly within the app. The <br /> integrated testing features allow for a streamlined .</p>
             </div>
             <div className="flex justify-between items-start gap-4 mt-4">
-                <div className="w-2/3 bg-amber-800 p-4">
-                    <h2>Blogs: {blogs.length}</h2>
+                <div className="w-2/3 p-4 space-y-4">
+                    <h2 className="text-2xl font-bold">Blogs: {blogs.length}</h2>
                     {
                         blogs.map(blog => <Blog 
                             key={blog.id}
